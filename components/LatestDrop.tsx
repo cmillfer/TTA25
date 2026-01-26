@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { MusicNoteIcon } from './icons/MusicNoteIcon';
+import { YouTubeIcon } from './icons/YouTubeIcon';
 
 const LatestDrop: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -77,9 +77,14 @@ const LatestDrop: React.FC = () => {
                             </p>
 
                             <div className="flex gap-4 flex-wrap sm:flex-nowrap">
-                                <a href="#" className="flex-1 bg-primary-green text-white font-bold uppercase text-xs py-3 px-4 rounded hover:bg-dark-green transition-colors flex items-center justify-center gap-2 shadow-[0_4px_0_rgb(20,80,50)] active:shadow-none active:translate-y-[4px]">
-                                    <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify" className="h-4 w-auto" />
-                                    <span>Spotify</span>
+                                <a 
+                                  href="https://www.youtube.com/@ToeTagAwards" 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="flex-1 bg-red-600 text-white font-bold uppercase text-xs py-3 px-4 rounded hover:bg-red-700 transition-colors flex items-center justify-center gap-2 shadow-[0_4px_0_rgb(150,0,0)] active:shadow-none active:translate-y-[4px]"
+                                >
+                                    <YouTubeIcon className="h-4 w-auto" />
+                                    <span>Watch on YouTube</span>
                                 </a>
                                 <a href="#" className="flex-1 bg-white text-black font-bold uppercase text-xs py-3 px-4 rounded hover:bg-paper-light transition-colors flex items-center justify-center gap-2 shadow-[0_4px_0_rgb(150,150,150)] active:shadow-none active:translate-y-[4px]">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Apple_Music_icon.svg/2048px-Apple_Music_icon.svg.png" alt="Apple Music" className="h-4 w-auto" />

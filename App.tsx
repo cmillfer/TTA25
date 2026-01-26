@@ -51,7 +51,7 @@ const App: React.FC = () => {
           <div id="music" ref={musicRef} className="py-20 sm:py-32 scroll-mt-16">
             <Music />
           </div>
-          
+
           <div className="w-full h-px bg-dark-red/50"></div>
           
           <div id="about" ref={aboutRef} className="py-20 sm:py-32 scroll-mt-16">
@@ -66,7 +66,7 @@ const App: React.FC = () => {
 
           <div className="w-full h-px bg-dark-red/50"></div>
 
-          {/* New Contact Form Section */}
+          {/* Contact Form Section */}
           <div id="contact" ref={contactRef} className="py-20 sm:py-32 scroll-mt-16 bg-brand-black">
              <Contact />
           </div>
