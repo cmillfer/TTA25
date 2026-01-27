@@ -10,6 +10,7 @@ import NewsletterBanner from './components/NewsletterBanner';
 import Preloader from './components/Preloader';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
+import Merch from './components/Merch';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,6 +18,7 @@ const App: React.FC = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
   const socialsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const merchRef = useRef<HTMLDivElement>(null);
 
   const scrollToMusic = () => {
     musicRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -34,6 +36,10 @@ const App: React.FC = () => {
     contactRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const scrollToMerch = () => {
+    merchRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <>
       {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
@@ -43,6 +49,7 @@ const App: React.FC = () => {
           onMusicClick={scrollToMusic} 
           onAboutClick={scrollToAbout} 
           onSocialsClick={scrollToSocials}
+          onMerchClick={scrollToMerch}
         />
         <NewsletterBanner />
         <main>
@@ -56,6 +63,12 @@ const App: React.FC = () => {
           
           <div id="about" ref={aboutRef} className="py-20 sm:py-32 scroll-mt-16">
             <About />
+          </div>
+
+          <div className="w-full h-px bg-dark-red/50"></div>
+
+          <div id="merch" ref={merchRef} className="py-20 sm:py-32 scroll-mt-16">
+            <Merch />
           </div>
 
           <div className="w-full h-px bg-dark-red/50"></div>

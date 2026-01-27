@@ -6,37 +6,43 @@ import { YouTubeIcon } from './icons/YouTubeIcon';
 import { TikTokIcon } from './icons/TikTokIcon';
 import { FacebookIcon } from './icons/FacebookIcon';
 import { ShoppingBagIcon } from './icons/ShoppingBagIcon';
+import { SoundCloudIcon } from './icons/SoundCloudIcon';
 import AnimateOnScroll from './AnimateOnScroll';
 
 const socialLinks = [
   {
     name: 'YouTube',
-    href: 'https://www.youtube.com/@ToeTagAwards',
+    href: 'https://www.youtube.com/@thetoetagawards',
     Icon: YouTubeIcon,
   },
   {
     name: 'TikTok',
-    href: 'https://tiktok.com/@toetagawards',
+    href: 'https://tiktok.com/@thetoetagawards',
     Icon: TikTokIcon,
   },
   {
     name: 'Instagram',
-    href: 'https://instagram.com/toetagawards',
+    href: 'https://instagram.com/thetoetagawards',
     Icon: InstagramIcon,
   },
   {
     name: 'Facebook',
-    href: 'https://facebook.com/ToeTagAwards',
+    href: 'https://facebook.com/thetoetagawards',
     Icon: FacebookIcon,
   },
   {
     name: 'X (Twitter)',
-    href: 'https://x.com/ToeTagAwards',
+    href: 'https://x.com/thetoetagawards',
     Icon: TwitterIcon,
   },
   {
+    name: 'SoundCloud',
+    href: 'https://soundcloud.com/thetoetagawards',
+    Icon: SoundCloudIcon,
+  },
+  {
     name: 'Merch',
-    href: 'https://etsy.com/shop/ToeTagAwardsStudios',
+    href: 'https://www.etsy.com/shop/ToeTagAwardsStudios',
     Icon: ShoppingBagIcon,
   },
 ];

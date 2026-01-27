@@ -7,9 +7,10 @@ interface HeaderProps {
   onMusicClick: () => void;
   onAboutClick: () => void;
   onSocialsClick: () => void;
+  onMerchClick: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsClick }) => {
+const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsClick, onMerchClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -33,6 +34,10 @@ const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsCl
   };
   const handleSocialsClick = () => {
     onSocialsClick();
+    setIsMenuOpen(false);
+  };
+  const handleMerchClick = () => {
+    onMerchClick();
     setIsMenuOpen(false);
   };
   const handleHomeClick = () => {
@@ -68,6 +73,12 @@ const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsCl
                 className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors"
               >
                 About
+              </button>
+              <button
+                onClick={handleMerchClick}
+                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors"
+              >
+                Merch
               </button>
               <button
                 onClick={onSocialsClick}
@@ -114,6 +125,12 @@ const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsCl
                 className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors"
               >
                 About
+              </button>
+              <button
+                onClick={handleMerchClick}
+                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors"
+              >
+                Merch
               </button>
               <button
                 onClick={handleSocialsClick}
