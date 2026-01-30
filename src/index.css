@@ -1,3 +1,13 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss";
+
+@theme {
+    --color-primary-red: #D22B2B;
+    --color-dark-red: #8B1A1A;
+    --color-paper-light: #F5E9D3;
+    --color-primary-green: #2E8B57;
+    --color-dark-green: #1F5C3A;
+    --color-brand-black: #0A0A0A;
+    --font-tech: "Share Tech Mono", monospace;
+    --font-typewriter: "Special Elite", monospace;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

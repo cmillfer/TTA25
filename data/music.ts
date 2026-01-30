@@ -8,6 +8,18 @@ interface CoverArtItem {
 
 export const coverArt: CoverArtItem[] = [
   {
+    src: '/images/Fallen.png',
+    alt: 'Cover art for Fallen From Grace, depicting a dramatic, ethereal scene that matches the song\'s title.',
+    title: 'Fallen From Grace',
+    streamUrl: 'https://www.youtube.com/@ToeTagAwards',
+  },
+  {
+    src: '/images/Flicker.png',
+    alt: 'Cover art for Flicker in the Ashes, a song by Toe Tag Awards.',
+    title: 'Flicker in the Ashes',
+    streamUrl: 'https://www.youtube.com/@ToeTagAwards',
+  },
+  {
     src: '/images/b0QOstD.jpeg',
     alt: 'Cover art for Vigilante, featuring a gritty illustration of a skull in a cowboy hat with crossed revolvers, embodying an outlaw theme.',
     title: 'Vigilante',
@@ -33,7 +45,7 @@ export const coverArt: CoverArtItem[] = [
   },
   {
     src: '/images/clhudCwD8bU-hqdefault.jpg',
-    alt: 'Cover art for Just a Little at a Time, featuring a woman in sunglasses in a futuristic setting with two masked figures behind her.',
+    alt: 'Cover art for Just a Little at a time, featuring a woman in sunglasses in a futuristic setting with two masked figures behind her.',
     title: 'Just a Little at a Time',
     streamUrl: 'https://youtu.be/clhudCwD8bU',
   },

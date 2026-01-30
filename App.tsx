@@ -10,7 +10,7 @@ import NewsletterBanner from './components/NewsletterBanner';
 import Preloader from './components/Preloader';
 import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
-import Merch from './components/Merch';
+import EvidenceLocker from './components/EvidenceLocker';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -68,7 +68,7 @@ const App: React.FC = () => {
           <div className="w-full h-px bg-dark-red/50"></div>
 
           <div id="merch" ref={merchRef} className="py-20 sm:py-32 scroll-mt-16">
-            <Merch />
+            <EvidenceLocker />
           </div>
 
           <div className="w-full h-px bg-dark-red/50"></div>

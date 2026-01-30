@@ -43,8 +43,8 @@ const LatestDrop: React.FC = () => {
                         {/* Cover Art */}
                         <div className="relative w-full max-w-xs shrink-0 group/art">
                             <img 
-                                src="https://i.imgur.com/b0QOstD.jpeg" 
-                                alt="Vigilante Cover" 
+                                src="/images/Fallen.png" 
+                                alt="Fallen From Grace Cover Art" 
                                 className="w-full rounded border border-primary-red/20 shadow-[0_0_15px_rgba(210,43,43,0.2)] group-hover/art:contrast-125 transition-all duration-500"
                             />
                             <div className="absolute top-0 right-0 p-2">
@@ -62,18 +62,18 @@ const LatestDrop: React.FC = () => {
                             <div>
                                 <div className="flex items-center gap-2 mb-2">
                                     <span className="bg-primary-red/20 text-primary-red text-[10px] px-2 py-1 rounded border border-primary-red/20 font-mono">SINGLE</span>
-                                    <span className="bg-slate-800 text-slate-400 text-[10px] px-2 py-1 rounded border border-slate-700 font-mono">2025</span>
+                                    <span className="bg-slate-800 text-slate-400 text-[10px] px-2 py-1 rounded border border-slate-700 font-mono">2024</span>
                                 </div>
-                                <h3 className="text-3xl sm:text-5xl font-bold uppercase font-typewriter text-white glitch" data-text="VIGILANTE">VIGILANTE</h3>
+                                <h3 className="text-3xl sm:text-5xl font-bold uppercase font-typewriter text-white glitch" data-text="FALLEN FROM GRACE">FALLEN FROM GRACE</h3>
                                 <div className="flex flex-wrap gap-2 sm:gap-4 mt-4 text-xs font-mono text-primary-green/80">
-                                    <span className="bg-brand-black border border-primary-green/30 px-2 py-1">BPM: 145</span>
-                                    <span className="bg-brand-black border border-primary-green/30 px-2 py-1">KEY: F# MIN</span>
-                                    <span className="bg-brand-black border border-primary-green/30 px-2 py-1">GENRE: OUTLAW BASS</span>
+                                    <span className="bg-brand-black border border-primary-green/30 px-2 py-1">BPM: 130</span>
+                                    <span className="bg-brand-black border border-primary-green/30 px-2 py-1">KEY: C MIN</span>
+                                    <span className="bg-brand-black border border-primary-green/30 px-2 py-1">GENRE: ETHEREAL BASS</span>
                                 </div>
                             </div>
 
                             <p className="text-paper-light/80 font-mono text-sm border-l-2 border-primary-red pl-4 italic">
-                                "Raw, gritty, and dangerous. The latest transmission from the underground combines western motifs with industrial bass design. Warning: May cause structural damage."
+                                "A haunting journey through sound, blending ethereal melodies with a heavy, grounding bassline. This track explores themes of descent and redemption."
                             </p>
 
                             <div className="flex gap-4 flex-wrap sm:flex-nowrap">
