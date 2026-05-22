@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const sounds = [
   { label: 'PANIC', url: 'https://www.soundjay.com/buttons/sounds/button-30.mp3', color: 'bg-primary-red' },
@@ -9,11 +9,31 @@ const sounds = [
 
 const Soundboard: React.FC = () => {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
+  const audioCache = useRef<Record<string, HTMLAudioElement>>({});
+
+  useEffect(() => {
+    // Pre-load audio objects
+    sounds.forEach(sound => {
+      if (!audioCache.current[sound.url]) {
+        const audio = new Audio(sound.url);
+        audio.volume = 0.4;
+        audioCache.current[sound.url] = audio;
+      }
+    });
+  }, []);
 
   const playSound = (url: string, index: number) => {
-    const audio = new Audio(url);
-    audio.volume = 0.4;
-    audio.play();
+    let audio = audioCache.current[url];
+
+    if (!audio) {
+      audio = new Audio(url);
+      audio.volume = 0.4;
+      audioCache.current[url] = audio;
+    }
+
+    audio.currentTime = 0;
+    audio.play().catch(err => console.error("Audio playback failed:", err));
+
     setActiveIdx(index);
     setTimeout(() => setActiveIdx(null), 300);
   };
