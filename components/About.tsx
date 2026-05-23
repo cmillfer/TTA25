@@ -6,7 +6,12 @@ import { ToeTagIcon } from "./icons/ToeTagIcon";
 // Helper component for the redacted text effect
 const Redacted: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <span className="bg-black text-black hover:bg-transparent hover:text-white transition-all cursor-help">
+    <span
+      className="bg-black text-black hover:bg-transparent hover:text-white focus-visible:bg-transparent focus-visible:text-white active:bg-transparent active:text-white transition-all cursor-help"
+      tabIndex={0}
+      title="Reveal redacted text"
+    >
+      <span className="sr-only">Redacted: </span>
       {children}
     </span>
   );
