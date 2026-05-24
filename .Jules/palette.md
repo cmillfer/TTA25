@@ -1,0 +1,3 @@
+## 2025-02-27 - Accessible Redacted Text Pattern
+**Learning:** Visual-only "redacted" text (black text on black background, revealed on hover) is completely inaccessible to keyboard-only and screen reader users. The text needs focus states to be keyboard accessible, a `title` tooltip for better context for pointer/keyboard users, and an `.sr-only` announcement label before the text so screen readers can interpret *why* the text might sound out of place.
+**Action:** Always add `tabIndex={0}`, `focus-visible`, `active`, a `title` attribute, and a `<span className="sr-only">[Redacted: ]</span>` prefix to visually redacted elements.
