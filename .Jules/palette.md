@@ -1,0 +1,3 @@
+## 2026-05-26 - Focus States on Icon-Only Links
+**Learning:** Found a recurring pattern in this application where icon-only links (like those in the Footer and potentially other components) lack native `title` tooltips for mouse users and explicit `focus-visible` styling for keyboard users.
+**Action:** Establish a reusable design system pattern for icon-only interactive elements: Always include `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black rounded-sm` (or similar variant) to ensure strong visual focus indication, along with a native `title` attribute for hover tooltips, and a `<span className="sr-only">` tag for screen readers.
