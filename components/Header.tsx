@@ -50,39 +50,41 @@ const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsCl
       <header className="sticky top-0 z-50 backdrop-blur-lg bg-brand-black/75 border-b border-dark-red/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div 
-              className="flex items-center cursor-pointer group" 
+            <button
+              type="button"
+              className="flex items-center cursor-pointer group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-red rounded-sm"
               onClick={handleHomeClick}
+              aria-label="Return to home page"
             >
               <ToeTagIcon className="h-8 w-auto text-paper-light group-hover:text-primary-red transition-colors duration-300"/>
               <span className="ml-3 text-lg font-bold uppercase font-mono tracking-wider text-paper-light group-hover:text-primary-red transition-colors duration-300">
                 Toe Tag Awards
               </span>
-            </div>
+            </button>
             
             {/* Desktop Nav */}
             <nav className="hidden sm:flex items-center space-x-8">
               <button
                 onClick={onMusicClick}
-                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors"
+                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-red rounded-sm"
               >
                 Music
               </button>
               <button
                 onClick={onAboutClick}
-                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors"
+                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-red rounded-sm"
               >
                 About
               </button>
               <button
                 onClick={handleMerchClick}
-                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors"
+                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-red rounded-sm"
               >
                 Merch
               </button>
               <button
                 onClick={onSocialsClick}
-                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors"
+                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-red rounded-sm"
               >
                 Follow
               </button>
@@ -116,25 +118,25 @@ const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsCl
             <nav className="flex flex-col items-center space-y-8">
               <button
                 onClick={handleMusicClick}
-                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors"
+                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-primary-red rounded-sm"
               >
                 Music
               </button>
               <button
                 onClick={handleAboutClick}
-                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors"
+                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-primary-red rounded-sm"
               >
                 About
               </button>
               <button
                 onClick={handleMerchClick}
-                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors"
+                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-primary-red rounded-sm"
               >
                 Merch
               </button>
               <button
                 onClick={handleSocialsClick}
-                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors"
+                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-primary-red rounded-sm"
               >
                 Follow
               </button>
