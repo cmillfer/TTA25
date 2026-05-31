@@ -1,0 +1,3 @@
+## 2025-05-31 - [Semantic Branding Wrappers]
+**Learning:** [Interactive branding elements, like logos that act as a "Return to home" link, must not use generic `div` wrappers with an `onClick` handler. Doing so ignores screen readers and keyboard navigation completely.]
+**Action:** [Always use semantic tags like `<button>` or `<a>` for interactive elements. Explicit `focus-visible` styling (`focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2`) must be applied to ensure keyboard users know when the element is focused.]
