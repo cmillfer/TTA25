@@ -67,7 +67,8 @@ const Socials: React.FC = () => {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center justify-center p-6 h-full bg-dark-red/10 rounded-lg border border-dark-red/50 hover:bg-dark-red/20 hover:border-primary-red transition-all duration-300 transform hover:-translate-y-1"
+              title={`Visit Toe Tag Awards on ${name}`}
+              className="group flex flex-col items-center justify-center p-6 h-full bg-dark-red/10 rounded-lg border border-dark-red/50 hover:bg-dark-red/20 hover:border-primary-red transition-all duration-300 transform hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black"
             >
               <Icon className="h-10 w-10 text-paper-light/80 group-hover:text-primary-red transition-colors" />
               <span className="mt-4 text-sm font-semibold uppercase font-mono tracking-wider text-paper-light group-hover:text-white">

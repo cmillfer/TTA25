@@ -1,0 +1,3 @@
+## 2025-06-02 - Icon-Only Interactive Elements Accessibility
+**Learning:** Icon-only interactive elements (such as social links in the footer or social cards) are inaccessible without explicit labeling for screen readers and keyboard navigation, and they lack affordance for mouse users without a native tooltip.
+**Action:** Always include a visually hidden `.sr-only` span with a descriptive label for screen readers, a native `title` attribute for mouse-hover tooltips, and explicit `focus-visible` styling (e.g., `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black`) to ensure keyboard navigability.
