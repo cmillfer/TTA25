@@ -48,7 +48,7 @@ const EvidenceLocker: FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {merchItems.map((item, index) => (
             <AnimateOnScroll key={item.id} delay={200 * (index + 1)}>
-              <a href={item.etsyUrl} target="_blank" rel="noopener noreferrer" className="group block">
+              <a href={item.etsyUrl} target="_blank" rel="noopener noreferrer" className="group block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
                 <div className="relative p-4 border border-gray-700 rounded-lg hover:bg-gray-800 transition-colors duration-300">
                   <div className="relative">
                     {/* Product Image */}
