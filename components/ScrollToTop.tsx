@@ -33,8 +33,9 @@ const ScrollToTop: React.FC = () => {
       <button
         type="button"
         onClick={scrollToTop}
-        className="group relative flex h-12 w-12 items-center justify-center bg-brand-black border-2 border-primary-red shadow-[0_0_10px_rgba(210,43,43,0.3)] transition-all duration-300 hover:bg-primary-red hover:shadow-[0_0_20px_rgba(210,43,43,0.6)] hover:-translate-y-1 active:translate-y-0"
+        className="group relative flex h-12 w-12 items-center justify-center bg-brand-black border-2 border-primary-red shadow-[0_0_10px_rgba(210,43,43,0.3)] transition-all duration-300 hover:bg-primary-red hover:shadow-[0_0_20px_rgba(210,43,43,0.6)] hover:-translate-y-1 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black rounded-sm"
         aria-label="Return to surface"
+        title="Return to top"
       >
         {/* Background glitch effect on hover */}
         <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-75"></div>
