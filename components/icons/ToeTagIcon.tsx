@@ -2,7 +2,7 @@ import React from 'react';
 
 export const ToeTagIcon: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = (props) => (
     <img 
-        src="https://i.imgur.com/XwkgwNM.png" 
+        src="/images/Imgone.png"
         alt="Toe Tag Awards Logo" 
         {...props}
         // Enforce aspect ratio and prevent squishing

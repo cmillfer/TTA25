@@ -63,7 +63,7 @@ const Hero: React.FC<HeroProps> = ({ onListenNowClick, onBookUsClick }) => {
         <div 
             className="absolute inset-0 -z-10 bg-cover bg-no-repeat bg-center transition-transform duration-100 ease-out"
             style={{ 
-                backgroundImage: `url(https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
+                backgroundImage: 'url(/images/ajkiz6DYmlU-maxresdefault.jpg)',
                 transform: `translateY(${scrollY * 0.4}px)`
             }}
         ></div>
