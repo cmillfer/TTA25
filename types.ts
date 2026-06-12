@@ -9,6 +9,8 @@ export interface CoverArtItem {
   alt: string;
   title: string;
   streamUrl: string;
+  videoId?: string;
   description?: string;
   publishedAt?: string;
+  type?: 'video' | 'mix' | 'live';
 }
