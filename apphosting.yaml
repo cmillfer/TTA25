@@ -1,3 +1,14 @@
+# Keep Vite build output in the Cloud Run bundle (App Hosting prunes
+# unrecognized framework artifacts unless explicitly included).
+outputFiles:
+  serverApp:
+    include:
+      - dist
+      - superstatic.json
+
+scripts:
+  runCommand: superstatic dist --port $PORT --host 0.0.0.0 -c superstatic.json
+
 env:
   - variable: VITE_YOUTUBE_API_KEY
     secret: viteYoutubeApiKey
