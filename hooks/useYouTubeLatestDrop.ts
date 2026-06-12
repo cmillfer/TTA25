@@ -17,14 +17,17 @@ export const useYouTubeLatestDrop = () => {
 
   useEffect(() => {
     const fetchLatestDrop = async () => {
-      setLoading(true);
+      const cached = readLatestDropCache<CoverArtItem>();
+      const hasCache = Boolean(cached?.videoId);
+
       setError(null);
       setUsingFallback(false);
 
-      const cached = readLatestDropCache<CoverArtItem>();
-      if (cached?.videoId) {
+      if (hasCache && cached) {
         setLatestDrop(cached);
         setLoading(false);
+      } else {
+        setLoading(true);
       }
 
       const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;

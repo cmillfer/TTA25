@@ -46,6 +46,8 @@ const MusicVideoCard: React.FC<MusicVideoCardProps> = ({ track }) => {
           <img
             src={track.src}
             alt={track.alt}
+            loading="lazy"
+            decoding="async"
             className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
               imageLoading ? 'opacity-0' : 'opacity-100'
             }`}
