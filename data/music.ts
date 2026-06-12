@@ -24,14 +24,14 @@ const curatedTracks: CoverArtItem[] = [
     src: '/images/Flicker.png',
     alt: 'Cover art for Flicker in the Ashes, a song by Toe Tag Awards.',
     title: 'Flicker in the Ashes',
-    streamUrl: 'https://www.youtube.com/@ToeTagAwards',
+    streamUrl: 'https://youtu.be/I6GczBoEJFY',
     type: 'video',
   }),
   withVideoId({
     src: '/images/b0QOstD.jpeg',
     alt: 'Cover art for Vigilante, featuring a gritty illustration of a skull in a cowboy hat with crossed revolvers, embodying an outlaw theme.',
     title: 'Vigilante',
-    streamUrl: 'https://www.youtube.com/@ToeTagAwards',
+    streamUrl: 'https://youtu.be/xgD_hAiqD2s',
     type: 'video',
   }),
   withVideoId({
