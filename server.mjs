@@ -6,7 +6,11 @@ import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
 const distDir = join(root, "dist");
-const port = Number(process.env.PORT) || 8080;
+const port = Number(process.env.PORT);
+if (!Number.isFinite(port) || port <= 0) {
+  console.error("PORT env var missing or invalid:", process.env.PORT);
+  process.exit(1);
+}
 
 const MIME = {
   ".html": "text/html; charset=utf-8",

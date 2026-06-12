@@ -3,7 +3,10 @@
 outputFiles:
   serverApp:
     include:
-      - .
+      - dist
+      - server.mjs
+      - package.json
+      - node_modules
 
 scripts:
   runCommand: node server.mjs
