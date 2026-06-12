@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "node -e \"const fs=require('fs'); if(!fs.existsSync('dist/index.html')){console.error('dist/index.html missing after build'); process.exit(1)} console.log('Build OK:', fs.readdirSync('dist'))\"",
     "preview": "vite preview",
-    "start": "superstatic dist --port $PORT --host 0.0.0.0 -c superstatic.json"
+    "start": "superstatic --port $PORT --host 0.0.0.0 -c firebase.json"
   },
   "engines": {
     "node": "24"
