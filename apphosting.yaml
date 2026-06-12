@@ -3,13 +3,10 @@
 outputFiles:
   serverApp:
     include:
-      - dist
-      - superstatic.json
-      - package.json
-      - node_modules
+      - .
 
 scripts:
-  runCommand: node node_modules/superstatic/lib/bin/server.js dist --port $PORT --host 0.0.0.0 -c superstatic.json
+  runCommand: node server.mjs
 
 env:
   - variable: VITE_YOUTUBE_API_KEY

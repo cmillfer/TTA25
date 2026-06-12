@@ -8,7 +8,7 @@
     "build": "vite build",
     "postbuild": "node scripts/verify-build.cjs",
     "preview": "vite preview",
-    "start": "superstatic dist --port $PORT --host 0.0.0.0 -c superstatic.json"
+    "start": "node server.mjs"
   },
   "engines": {
     "node": "24"
