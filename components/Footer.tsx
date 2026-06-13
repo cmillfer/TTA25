@@ -17,27 +17,27 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="flex justify-center flex-wrap gap-6">
-                <a href="https://www.youtube.com/@ToeTagAwards" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-red transition-colors">
+                <a href="https://www.youtube.com/@ToeTagAwards" target="_blank" rel="noopener noreferrer" title="YouTube" className="text-slate-400 hover:text-primary-red transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black">
                     <span className="sr-only">YouTube</span>
                     <YouTubeIcon className="h-6 w-6" aria-hidden="true" />
                 </a>
-                <a href="https://tiktok.com/@toetagawards" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-red transition-colors">
+                <a href="https://tiktok.com/@toetagawards" target="_blank" rel="noopener noreferrer" title="TikTok" className="text-slate-400 hover:text-primary-red transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black">
                     <span className="sr-only">TikTok</span>
                     <TikTokIcon className="h-6 w-6" aria-hidden="true" />
                 </a>
-                <a href="https://instagram.com/toetagawards" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-red transition-colors">
+                <a href="https://instagram.com/toetagawards" target="_blank" rel="noopener noreferrer" title="Instagram" className="text-slate-400 hover:text-primary-red transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black">
                     <span className="sr-only">Instagram</span>
                     <InstagramIcon className="h-6 w-6" aria-hidden="true" />
                 </a>
-                <a href="https://facebook.com/ToeTagAwards" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-red transition-colors">
+                <a href="https://facebook.com/ToeTagAwards" target="_blank" rel="noopener noreferrer" title="Facebook" className="text-slate-400 hover:text-primary-red transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black">
                     <span className="sr-only">Facebook</span>
                     <FacebookIcon className="h-6 w-6" aria-hidden="true" />
                 </a>
-                <a href="https://x.com/ToeTagAwards" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-red transition-colors">
+                <a href="https://x.com/ToeTagAwards" target="_blank" rel="noopener noreferrer" title="X (Twitter)" className="text-slate-400 hover:text-primary-red transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black">
                     <span className="sr-only">X (Twitter)</span>
                     <TwitterIcon className="h-6 w-6" aria-hidden="true" />
                 </a>
-                <a href="https://etsy.com/shop/ToeTagAwardsStudios" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-red transition-colors">
+                <a href="https://etsy.com/shop/ToeTagAwardsStudios" target="_blank" rel="noopener noreferrer" title="Merch" className="text-slate-400 hover:text-primary-red transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black">
                     <span className="sr-only">Merch</span>
                     <ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
                 </a>
