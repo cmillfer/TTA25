@@ -9,3 +9,7 @@
 ## 2025-06-12 - Redacted Text Accessibility
 **Learning:** When implementing visual "redacted" text (e.g., black-on-black text revealed via interaction), it requires explicit structural support to be accessible. A pure CSS `hover` effect leaves keyboard-only and screen reader users completely unaware of the content or its interaction.
 **Action:** Always complement visual "redacted" text with `tabIndex={0}`, `focus-visible` and `active` states to match hover behaviors, a native `title` tooltip for context, and a `<span className="sr-only">` tag to announce the redaction to screen readers.
+
+## 2025-06-13 - Focus Ring Rendering Delay
+**Learning:** When using automated testing tools (like Playwright) to visually verify keyboard accessibility styles (e.g., Tailwind's `focus-visible:ring-2`), the browser requires a brief paint delay after the `.focus()` event is fired before the CSS outline is fully rendered. Capturing a screenshot immediately after `.focus()` often results in a false negative where the ring is missing.
+**Action:** Always add a short delay (e.g., `page.wait_for_timeout(500)`) immediately after calling `.focus()` on an element before capturing an accessibility verification screenshot.
