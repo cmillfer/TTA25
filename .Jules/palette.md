@@ -9,3 +9,6 @@
 ## 2025-06-12 - Redacted Text Accessibility
 **Learning:** When implementing visual "redacted" text (e.g., black-on-black text revealed via interaction), it requires explicit structural support to be accessible. A pure CSS `hover` effect leaves keyboard-only and screen reader users completely unaware of the content or its interaction.
 **Action:** Always complement visual "redacted" text with `tabIndex={0}`, `focus-visible` and `active` states to match hover behaviors, a native `title` tooltip for context, and a `<span className="sr-only">` tag to announce the redaction to screen readers.
+## 2025-06-12 - Dynamic State Announcement for Toggles
+**Learning:** For toggle buttons (like mobile menus), screen reader text (e.g., `sr-only`) must dynamically reflect the *next* action that will occur (e.g., 'Close menu' when open, 'Open menu' when closed) rather than using a static description, to avoid confusing non-visual users.
+**Action:** Always bind the `sr-only` content and `title` attribute of toggle buttons to the component's state (e.g., `isOpen`).
