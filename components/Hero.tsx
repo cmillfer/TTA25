@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   HERO_IMAGE_JPG,
   HERO_IMAGE_LEGACY,
@@ -11,35 +11,60 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ onListenNowClick, onBookUsClick }) => {
-  const [scrollY, setScrollY] = useState(0);
+  const bgRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (bgRef.current) {
+            bgRef.current.style.transform = `translateY(${window.scrollY * 0.35}px)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
+    let mouseTicking = false;
+    let mouseX = 0;
+    let mouseY = 0;
     const handleMouseMove = (e: MouseEvent) => {
-      if (!titleRef.current) return;
+      mouseX = e.clientX;
+      mouseY = e.clientY;
 
-      const titleRect = titleRef.current.getBoundingClientRect();
-      const titleCenterX = titleRect.left + titleRect.width / 2;
-      const titleCenterY = titleRect.top + titleRect.height / 2;
+      if (!mouseTicking) {
+        window.requestAnimationFrame(() => {
+          if (!titleRef.current) {
+            mouseTicking = false;
+            return;
+          }
 
-      const distance = Math.sqrt(
-        Math.pow(e.clientX - titleCenterX, 2) +
-          Math.pow(e.clientY - titleCenterY, 2)
-      );
+          const titleRect = titleRef.current.getBoundingClientRect();
+          const titleCenterX = titleRect.left + titleRect.width / 2;
+          const titleCenterY = titleRect.top + titleRect.height / 2;
 
-      const maxDistance = window.innerWidth / 3;
-      const proximity = Math.max(0, 1 - distance / maxDistance);
+          const distance = Math.sqrt(
+            Math.pow(mouseX - titleCenterX, 2) +
+              Math.pow(mouseY - titleCenterY, 2)
+          );
 
-      const duration1 = 0.1 + (1 - proximity) * 2.4;
-      const duration2 = 0.1 + (1 - proximity) * 1.4;
+          const maxDistance = window.innerWidth / 3;
+          const proximity = Math.max(0, 1 - distance / maxDistance);
 
-      titleRef.current.style.setProperty('--glitch-duration-1', `${duration1}s`);
-      titleRef.current.style.setProperty('--glitch-duration-2', `${duration2}s`);
+          const duration1 = 0.1 + (1 - proximity) * 2.4;
+          const duration2 = 0.1 + (1 - proximity) * 1.4;
+
+          titleRef.current.style.setProperty('--glitch-duration-1', `${duration1}s`);
+          titleRef.current.style.setProperty('--glitch-duration-2', `${duration2}s`);
+
+          mouseTicking = false;
+        });
+        mouseTicking = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -64,8 +89,8 @@ const Hero: React.FC<HeroProps> = ({ onListenNowClick, onBookUsClick }) => {
   return (
     <div ref={heroRef} className="relative isolate overflow-hidden pt-14">
       <div
+        ref={bgRef}
         className="absolute inset-0 -z-20 overflow-hidden"
-        style={{ transform: `translateY(${scrollY * 0.35}px)` }}
       >
         <picture>
           <source srcSet={HERO_IMAGE_WEBP} type="image/webp" />
