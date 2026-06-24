@@ -57,7 +57,7 @@ const LiveShows: React.FC = () => {
 
       <div className="space-y-4">
         {shows.map((show, index) => (
-          <AnimateOnScroll key={index} delay={index * 100}>
+          <AnimateOnScroll key={`${show.date}-${show.venue}`} delay={index * 100}>
             <div className="group relative flex flex-col md:flex-row items-center justify-between p-6 bg-brand-black border border-dark-red/30 rounded-lg hover:border-primary-red transition-all duration-300">
               <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                 <div className="font-tech text-2xl text-primary-red font-bold tracking-tighter">
