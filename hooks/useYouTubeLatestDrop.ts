@@ -45,24 +45,7 @@ export const useYouTubeLatestDrop = () => {
       }
 
       try {
-        const channelResponse = await fetch(
-          `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${CHANNEL_ID}&key=${apiKey}`
-        );
-
-        if (!channelResponse.ok) {
-          throw new Error(
-            `YouTube API returned ${channelResponse.status}: ${channelResponse.statusText}`
-          );
-        }
-
-        const channelData = await channelResponse.json();
-
-        if (!channelData.items?.length) {
-          throw new Error('YouTube channel not found.');
-        }
-
-        const uploadsPlaylistId =
-          channelData.items[0].contentDetails.relatedPlaylists.uploads;
+        const uploadsPlaylistId = CHANNEL_ID.replace(/^UC/, 'UU');
 
         const playlistResponse = await fetch(
           `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${uploadsPlaylistId}&maxResults=1&key=${apiKey}`
