@@ -65,25 +65,25 @@ const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsCl
             <nav className="hidden sm:flex items-center space-x-8">
               <button
                 onClick={onMusicClick}
-                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors"
+                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-4 focus-visible:ring-offset-brand-black rounded-sm"
               >
                 Music
               </button>
               <button
                 onClick={onAboutClick}
-                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors"
+                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-4 focus-visible:ring-offset-brand-black rounded-sm"
               >
                 About
               </button>
               <button
                 onClick={handleMerchClick}
-                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors"
+                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-4 focus-visible:ring-offset-brand-black rounded-sm"
               >
                 Merch
               </button>
               <button
                 onClick={onSocialsClick}
-                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors"
+                className="text-sm font-medium text-paper-light hover:text-primary-red transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-4 focus-visible:ring-offset-brand-black rounded-sm"
               >
                 Follow
               </button>
@@ -93,11 +93,13 @@ const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsCl
             <div className="sm:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-paper-light hover:text-primary-red hover:bg-dark-red/20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-red"
+                className="inline-flex items-center justify-center p-2 rounded-md text-paper-light hover:text-primary-red hover:bg-dark-red/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black"
                 aria-expanded={isMenuOpen}
                 aria-controls="mobile-menu"
               >
-                <span className="sr-only">Open main menu</span>
+                <span className="sr-only">
+                  {isMenuOpen ? 'Close main menu' : 'Open main menu'}
+                </span>
                 {isMenuOpen ? (
                   <XIcon className="block h-6 w-6" aria-hidden="true" />
                 ) : (
@@ -117,25 +119,25 @@ const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsCl
             <nav className="flex flex-col items-center space-y-8">
               <button
                 onClick={handleMusicClick}
-                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors"
+                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-4 focus-visible:ring-offset-brand-black rounded-sm"
               >
                 Music
               </button>
               <button
                 onClick={handleAboutClick}
-                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors"
+                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-4 focus-visible:ring-offset-brand-black rounded-sm"
               >
                 About
               </button>
               <button
                 onClick={handleMerchClick}
-                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors"
+                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-4 focus-visible:ring-offset-brand-black rounded-sm"
               >
                 Merch
               </button>
               <button
                 onClick={handleSocialsClick}
-                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors"
+                className="text-2xl font-bold uppercase font-mono tracking-wider text-paper-light hover:text-primary-red transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-red focus-visible:ring-offset-4 focus-visible:ring-offset-brand-black rounded-sm"
               >
                 Follow
               </button>
