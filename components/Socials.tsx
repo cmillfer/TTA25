@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { YOUTUBE_CHANNEL_URL } from '../constants/youtube';
 import { InstagramIcon } from './icons/InstagramIcon';
 import { TwitterIcon } from './icons/TwitterIcon';
 import { YouTubeIcon } from './icons/YouTubeIcon';
@@ -12,7 +13,7 @@ import AnimateOnScroll from './AnimateOnScroll';
 const socialLinks = [
   {
     name: 'YouTube',
-    href: 'https://www.youtube.com/@thetoetagawards',
+    href: YOUTUBE_CHANNEL_URL,
     Icon: YouTubeIcon,
   },
   {

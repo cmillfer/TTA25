@@ -28,10 +28,10 @@ const LatestDrop: React.FC<LatestDropProps> = ({
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-red opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-red"></span>
             </span>
-            INCOMING_TRANSMISSION // LIVE
+            {usingFallback ? 'FEATURED VIDEO' : 'LATEST CHANNEL VIDEO'}
           </div>
           <div className="hidden sm:block">
-            {usingFallback ? 'API_STATUS: FALLBACK' : 'API_STATUS: CONNECTED'}
+            {loading ? 'LOADING VIDEOS' : usingFallback ? 'SAVED SELECTION' : 'FROM YOUTUBE'}
           </div>
         </div>
 
@@ -77,11 +77,11 @@ const LatestDrop: React.FC<LatestDropProps> = ({
                     <span className="bg-slate-800 text-slate-400 text-[10px] px-2 py-1 rounded border border-slate-700 font-mono">
                       {latestDrop.publishedAt
                         ? new Date(latestDrop.publishedAt).getFullYear()
-                        : 'NEW'}
+                        : 'VIDEO'}
                     </span>
                     {usingFallback && (
                       <span className="bg-amber-900/40 text-amber-300 text-[10px] px-2 py-1 rounded border border-amber-700/40 font-mono">
-                        CURATED FALLBACK
+                        SAVED VIDEO
                       </span>
                     )}
                   </div>
