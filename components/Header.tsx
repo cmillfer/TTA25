@@ -96,8 +96,9 @@ const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsCl
                 className="inline-flex items-center justify-center p-2 rounded-md text-paper-light hover:text-primary-red hover:bg-dark-red/20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-red"
                 aria-expanded={isMenuOpen}
                 aria-controls="mobile-menu"
+                title={isMenuOpen ? "Close main menu" : "Open main menu"}
               >
-                <span className="sr-only">Open main menu</span>
+                <span className="sr-only">{isMenuOpen ? "Close main menu" : "Open main menu"}</span>
                 {isMenuOpen ? (
                   <XIcon className="block h-6 w-6" aria-hidden="true" />
                 ) : (
