@@ -97,7 +97,7 @@ const Header: React.FC<HeaderProps> = ({ onMusicClick, onAboutClick, onSocialsCl
                 aria-expanded={isMenuOpen}
                 aria-controls="mobile-menu"
               >
-                <span className="sr-only">Open main menu</span>
+                <span className="sr-only">{isMenuOpen ? 'Close main menu' : 'Open main menu'}</span>
                 {isMenuOpen ? (
                   <XIcon className="block h-6 w-6" aria-hidden="true" />
                 ) : (

@@ -9,3 +9,7 @@
 ## 2025-06-12 - Redacted Text Accessibility
 **Learning:** When implementing visual "redacted" text (e.g., black-on-black text revealed via interaction), it requires explicit structural support to be accessible. A pure CSS `hover` effect leaves keyboard-only and screen reader users completely unaware of the content or its interaction.
 **Action:** Always complement visual "redacted" text with `tabIndex={0}`, `focus-visible` and `active` states to match hover behaviors, a native `title` tooltip for context, and a `<span className="sr-only">` tag to announce the redaction to screen readers.
+
+## 2025-06-13 - Dynamic Toggle Screen Reader Text
+**Learning:** For toggle buttons (like mobile menus), static screen reader text (e.g., "Open menu") becomes inaccurate once the state changes, confusing non-visual users about the button's current function.
+**Action:** Always ensure screen reader text dynamically reflects the *next* action that will occur (e.g., `{isOpen ? 'Close menu' : 'Open menu'}`) rather than describing the button generically.
