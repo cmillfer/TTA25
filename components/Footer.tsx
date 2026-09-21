@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { YOUTUBE_CHANNEL_URL } from '../constants/youtube';
 import { InstagramIcon } from './icons/InstagramIcon';
 import { TwitterIcon } from './icons/TwitterIcon';
 import { YouTubeIcon } from './icons/YouTubeIcon';
@@ -17,7 +18,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="flex justify-center flex-wrap gap-6">
-                <a href="https://www.youtube.com/@ToeTagAwards" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-red transition-colors">
+                <a href={YOUTUBE_CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary-red transition-colors">
                     <span className="sr-only">YouTube</span>
                     <YouTubeIcon className="h-6 w-6" aria-hidden="true" />
                 </a>
