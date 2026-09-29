@@ -1,7 +1,5 @@
-
 import { FC, ReactNode } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
-import { ToeTagIcon } from "./icons/ToeTagIcon";
 
 // Helper component for the redacted text effect
 const Redacted: FC<{ children: ReactNode }> = ({ children }) => {
@@ -24,7 +22,23 @@ const About: FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
           <div className="md:col-span-1 flex justify-center">
             <AnimateOnScroll>
-              <ToeTagIcon className="h-48 w-48 text-primary-red" />
+              <figure className="w-full max-w-sm">
+                <div className="relative">
+                  <div
+                    className="absolute -inset-1 bg-primary-red/25 blur-md rounded-sm"
+                    aria-hidden="true"
+                  />
+                  <img
+                    src="/images/underground-feature.webp"
+                    alt="The Underground magazine cover featuring Toe Tag Awards"
+                    className="relative w-full h-auto rounded-sm border border-primary-red/40 shadow-2xl"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="mt-3 text-center text-xs uppercase tracking-[0.2em] text-paper-light/60 font-mono">
+                  Featured in The Underground
+                </figcaption>
+              </figure>
             </AnimateOnScroll>
           </div>
           <div className="md:col-span-2">
@@ -55,13 +69,13 @@ const About: FC = () => {
                   dangerous and deliberate.
                 </p>
                 <p className="text-lg leading-relaxed text-paper-light/90 font-mono">
-                  Toe Tag Awards’ sets are high‑octane transmissions built for the
+                  Toe Tag Awards’ sets are high-octane transmissions built for the
                   bold, the gritty, and the midnight wanderers. Each performance
                   is immersive and confrontational, designed to hit hard, linger
                   long, and leave an impression that doesn’t fade when the lights
                   come up.
                 </p>
-                 <p className="text-lg leading-relaxed text-paper-light/90 font-mono italic">
+                <p className="text-lg leading-relaxed text-paper-light/90 font-mono italic">
                   They don’t just play tracks. They leave a mark. Every set is a statement.
                 </p>
                 <p className="text-lg leading-relaxed text-paper-light/90 font-mono">
@@ -78,7 +92,7 @@ const About: FC = () => {
                       Born and raised in Virginia’s 757, came up through the local
                       underground scene. He began playing piano at an early age,
                       building a foundation that would later evolve into
-                      hard‑hitting electronic production and uncompromising DJ
+                      hard-hitting electronic production and uncompromising DJ
                       sets. From keys to controllers, Corey has been <Redacted>dropping fire</Redacted>
                       ever since.
                     </p>
@@ -89,12 +103,12 @@ const About: FC = () => {
                       Born and raised in the heart of the Neptunes’ territory,
                       started thrashing drums early, channeling raw energy into
                       rhythm. His deep love for music led him to share stages
-                      with top‑tier acts including <Redacted>Slipknot, Slayer, and Agent Orange</Redacted>. That live‑performance intensity now fuels the
+                      with top-tier acts including <Redacted>Slipknot, Slayer, and Agent Orange</Redacted>. That live-performance intensity now fuels the
                       backbone of Toe Tag Awards’ sound.
                     </p>
                   </div>
                 </div>
-                 <p className="text-lg leading-relaxed text-paper-light/90 font-mono pt-4">
+                <p className="text-lg leading-relaxed text-paper-light/90 font-mono pt-4">
                   Toe Tag Awards isn’t here to blend in, they’re here to be felt. Step into the noise, turn it up, and catch them live where <Redacted>the underground still breathes</Redacted>.
                 </p>
               </div>
